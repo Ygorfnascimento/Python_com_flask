@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Calcular números</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #e0f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 220px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, #fff, #aaa);
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: linear-gradient(to right, #ddd, #555);
+    color: #fff;
+  }
+
+  .operator {
+    font-weight: bold;
+    background: #ffd966;
+  }
+
+  .operator:hover {
+    background: #ffca33;
+    color: #000;
+  }
+
+  .route {
+    font-size: 12px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+  <form action="/soma" method="post">
+    <input type="text" name="num1" placeholder="Número 1">
+    <input type="text" name="num2" placeholder="Número 2">
+    <button type="submit" class="operator">Somar</button>
+  </form>
+
+  <form action="/sub" method="post">
+    <input type="text" name="num1" placeholder="Número 1">
+    <input type="text" name="num2" placeholder="Número 2">
+    <button type="submit" class="operator">Subtrair</button>
+  </form>
+
+  <form action="/multiplicacao" method="post">
+    <input type="text" name="num1" placeholder="Número 1">
+    <input type="text" name="num2" placeholder="Número 2">
+    <button type="submit" class="operator">Multiplicar</button>
+  </form>
+
+  <form action="/divisao" method="post">
+    <input type="text" name="num1" placeholder="Número 1">
+    <input type="text" name="num2" placeholder="Número 2">
+    <button type="submit" class="operator">Dividir</button>
+  </form>
+</div>
+
+</body>
+</html>
