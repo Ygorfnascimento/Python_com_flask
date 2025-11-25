@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Agenda{% endblock %}</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Slab', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #2563eb;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #2563eb;
+            background: #ffffff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 2px solid #2563eb;
+            transition: all 0.25s ease;
+        }
+
+        header a:hover {
+            background: #2563eb;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ffffff33;
+            margin: 0;
+        }
+
+        main {
+            padding: 50px 20px;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsividade para telas pequenas */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header h2 {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            header a {
+                margin-top: 10px;
+                align-self: center;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Agenda de {{ usuario }}</h2>
+    <a href="{{ url_for('logout') }}">Sair</a>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>
