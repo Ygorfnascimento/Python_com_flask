@@ -1,89 +1,72 @@
-<h1 align="center">🐍 Mini projetos em Python com Flask</h1>
+# 🧪 Mini Projetos em Python com Flask
 
-<p align="center">
-  <img src="https://img.shields.io/badge/linguagem-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/framework-Flask-000?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/frontend-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-</p>
-
-Repositório contendo **mini projetos desenvolvidos em Python com Flask**, utilizando **HTML** para renderização de páginas, voltados à prática de aplicações web simples.
+Este repositório contém uma coleção de mini projetos desenvolvidos em Python com **Flask**, utilizando **HTML** para renderização de páginas, voltados à prática de conceitos essenciais de aplicações web.
 
 ---
 
 ## 🎯 Objetivo
 
-Praticar o desenvolvimento de **aplicações web** com **Flask**, explorando:
+Praticar o desenvolvimento de aplicações web com Flask, explorando:
 
-- criação de rotas  
-- renderização de páginas HTML  
-- organização básica de projetos Flask  
-- execução de servidores locais  
-
----
-
-## 📂 Organização dos projetos
-
-Cada **mini projeto** está organizado em sua própria pasta, contendo os arquivos Python e HTML necessários para execução. Os nomes das pastas indicam o objetivo de cada mini projeto.
+* Criação de rotas dinâmicas
+* Renderização de páginas HTML com Jinja2 (templates)
+* Manipulação de requisições e formulários (POST/GET)
+* Organização básica de projetos Flask e ambientes virtuais
 
 ---
 
-## 🛠 Tecnologias utilizadas
+## 📂 Organização dos Projetos
 
-- **Python 3**
-- **Flask**
-- **HTML5**
-- **Ambiente de desenvolvimento:** PyCharm / Navegador
-- **Ambiente virtual:** venv
+O repositório está dividido em pastas independentes, focando em cenários específicos de estudo:
 
----
+* **`primeiro_projeto_flask`:** Estrutura inicial e primeiras rotas com Flask.
+* **`projeto_agenda (flask)`:** Criação de uma agenda funcional com telas de base, index e login.
+* **`projeto_calculadora (flask)`:** Recebimento de dados via formulário e exibição de resultados matemáticos.
+* **`projeto_cores (flask)`:** Estudo de renderização dinâmica de dados e estilos no template.
+* **`projeto_login (flask)`:** Simulação de fluxo de autenticação entre páginas restritas e formulários.
 
-## ✅ Pré-requisitos
-
-Antes de executar qualquer mini projeto, certifique-se de ter instalado:
-
-- **Python 3**  
-- **pip** (gerenciador de pacotes do Python)  
-- **Git** (opcional, para clonar o repositório)
+> ⚠️ **Observação:** Os mini projetos são laboratórios de estudo independentes e focam na lógica de rotas com Flask + HTML, não possuindo banco de dados relacional complexo.
 
 ---
 
-## 🚀 Como executar
+## 🛠️ Tecnologias Utilizadas
 
-1. Clone o repositório:
+* **Linguagem:** Python 3.x
+* **Framework Back-end:** Flask
+* **Frontend:** HTML5
+* **Ambiente Virtual:** venv
+
+---
+
+## 🚀 Como Executar
+
+Siga os passos abaixo para preparar o ambiente e rodar qualquer um dos projetos localmente:
+
+### 1. Clone o repositório e acesse a pasta do projeto desejado:
 ```bash
 git clone https://github.com/Ygorfnascimento/Python_com_flask.git
+cd Python_com_flask/projeto_calculadora (flask)/ex_flask (1)
 ```
-2. Acesse a pasta do mini projeto desejado:
+### 2. Crie e ative o ambiente virtual (opcional):
 ```bash
-cd Python_com_flask/nome_do_projeto
-```
-3. Crie e ative um ambiente virtual (opcional, mas recomendado):
-
-Windows
-```bash
+# Criar o ambiente virtual (rode apenas a primeira vez)
 python -m venv venv
-venv\Scripts\activate
-```
-Linux / macOS
-```bash
-python3 -m venv venv
+
+# Ativar no Windows:
+.\venv\Scripts\activate
+
+# Ativar no Linux/Mac:
 source venv/bin/activate
 ```
-4. Instale o Flask:
+### 3. Instale o Flask:
 ```bash
 pip install flask
 ```
-5. Rode o servidor:
+### 4. Execute o servidor local:
 ```bash
-python app.py
+python calcular.py
 ```
-6. Ou, se o nome do arquivo principal for outro, ajuste para:
-```bash
-python nome_do_arquivo.py
-```
-7. O servidor será iniciado localmente, geralmente em:
-```bash
-http://127.0.0.1:5000
-```
+> ⚠️ Observação: Fique atento ao arquivo principal de cada pasta. No projeto da calculadora é `calcular.py`, no de cores é `cor.py`, na agenda é `agenda.py` e nos demais costuma ser `app.py`
+### 5. Acesse no seu navegador:
+`http://127.0.0.1:5000`
 
-> ⚠️ Observação: Os mini projetos são independentes entre si e têm como foco o aprendizado de **Flask com HTML**, não possuindo autenticação avançada ou banco de dados.
